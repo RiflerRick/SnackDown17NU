@@ -78,24 +78,22 @@ def isSnakesOverlapping(snake1Start,snake1End,snake2Start, snake2End, alignment)
         else:
             return 1
 
-def main():
-    testCase=int(input())
-    answers=[]
-    for i in range(testCase):
-        snake=input()
-        snakeCoordinates=snake.split(' ')
-        snake1Start=(int(snakeCoordinates[0]), int(snakeCoordinates[1]))
-        snake1End=(int(snakeCoordinates[2]), int(snakeCoordinates[3]))
-        snake=input()
-        snakeCoordinates=snake.split(' ')
-        snake2Start=(int(snakeCoordinates[0]), int(snakeCoordinates[1]))
-        snake2End=(int(snakeCoordinates[2]), int(snakeCoordinates[3]))
-        if isSameSnake(snake1Start,snake1End,snake2Start, snake2End)==1:
-            answers.append('yes')
-        else:
-            answers.append('no')
-    for i in range(testCase):
-        print(answers[i])
-
-if __name__=="__main__":
-    main()
+testCase=int(input())
+# answers=[]
+for i in range(testCase):
+    snake=input()
+    snakeCoordinates=snake.split(' ')
+    snake1Start=(int(snakeCoordinates[0]), int(snakeCoordinates[1]))
+    snake1End=(int(snakeCoordinates[2]), int(snakeCoordinates[3]))
+    snake=input()
+    snakeCoordinates=snake.split(' ')
+    snake2Start=(int(snakeCoordinates[0]), int(snakeCoordinates[1]))
+    snake2End=(int(snakeCoordinates[2]), int(snakeCoordinates[3]))
+    if isSameSnake(snake1Start,snake1End,snake2Start, snake2End)==1:
+        # answers.append('yes')
+        print('yes')
+    else:
+        # answers.append('no')
+        print('no')
+# for i in range(testCase):
+#     print(answers[i])
