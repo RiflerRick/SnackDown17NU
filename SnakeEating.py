@@ -1,5 +1,6 @@
-def answer(lengthList, k):
+def answer(l, k):
     # lengthList is a list of lengths of all the snakes
+    lengthList=l[:]
     num=0
     index=0
     while index<len(lengthList):
@@ -40,9 +41,10 @@ for i in range(testcase):
     numSnakes=int(firstLineList[0]) 
     numQueries=int(firstLineList[1])
     snakeLengthString=input()
-    snakeLengthList = list(map(int, snakeLengthString.split(' '))) 
+    snakeLengthList = list(map(int, snakeLengthString.split(' ')))
     # map function is used to map characters to integers in one go
     for j in range(numQueries):
         query=input()
         query=int(query)
+        # print('list now:'+str(snakeLengthList))
         print(answer(snakeLengthList, query))
