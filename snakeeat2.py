@@ -1,6 +1,7 @@
 def answer(N, L, Q):
     while(Q > 0):
         q = int(input())
+        
         Q = Q - 1
         count = 0
         i = 0
@@ -13,7 +14,7 @@ def answer(N, L, Q):
 
 # mapping to integer removed to make it more space efficient
 # passing the list of lengths only once to answer function to increase time efficiency
-# I think that the time complexity is O(n) and nothing better than this could be acheived
+# I think that the time complexity is O(n) and nothing better than this could be achieved
 # Sorting is also removed for this purpose.
 def main():
     T = int(input())

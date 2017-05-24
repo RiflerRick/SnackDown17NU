@@ -2,27 +2,18 @@ def answer(l, k):
     # lengthList is a list of lengths of all the snakes
     lengthList=l[:]
     num=0
-    index=0
-    while index<len(lengthList):
-        if lengthList[index]>=k:
-            num+=1
-
-            # pop the length of the snake that is already going to be greater than k
-
-            lengthList.pop(index)
-            continue
-        index+=1
 
     # sorting the list in ascending order 
     lengthList.sort()
     index=len(lengthList)-1
     while index>0:
         # traversing the list from back to front
-        if lengthList[index]==k:
+        if lengthList[index]>=k:
             num+=1
-            lengthList.pop(index)
-            index-=1
 
+            # pop the length of the snake that is already going to be greater than k
+            index-=1
+        
         else:
             lengthList[index]+=1
             lengthList.pop(index-1)
