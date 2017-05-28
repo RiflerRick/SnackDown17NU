@@ -96,7 +96,9 @@ for i in range(testcases):
     # s=''
     # for i in range(500):
     #     s+='#'
-    row1=input()
-    row2=input()
+
+    # limiting the width of input
+    row1=input()[:num]
+    row2=input()[:num]
     snakeFound=0
     print(answer(row1, row2))
