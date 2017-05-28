@@ -71,12 +71,18 @@ def answer(row1, row2):
     for i in range(columns):
         if row1[i]=='#' and row2[i]=='#':
             ans1=path(0, row1, row2, i+1, snakeFound) 
+            # print('ans1:'+str(ans1))
             ans2=path(1, row1, row2, i+1, snakeFound)
+            # print('ans2:'+str(ans2))
             return 'yes' if (ans1 or ans2) else 'no'
         elif row1[i]=='#':
+            if i==columns-1:
+                return 'no'
             ans=path(0, row1, row2, i+1, snakeFound)
             return 'yes' if ans else 'no'
         elif row2[i]=='#':
+            if i==columns-1:
+                return 'no'
             ans=path(1, row1, row2, i+1, snakeFound)
             return 'yes' if ans else 'no'
 
@@ -87,6 +93,9 @@ def answer(row1, row2):
 testcases=int(input())
 for i in range(testcases):
     num=int(input())
+    # s=''
+    # for i in range(500):
+    #     s+='#'
     row1=input()
     row2=input()
     snakeFound=0
